@@ -1133,7 +1133,7 @@ $(document).ready(function() {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: true };
 			});
 		}).catch(function() {
-			return download(Module.locateFile('MyProject2.wasm'), 'arraybuffer').then(function(wasmBytes) {
+			return download(Module.locateFile('https://drive.google.com/uc?export=download&id=1Q7XlJB57BGGCKZ8LmQ5XRdeFSmjG1lGq'), 'arraybuffer').then(function(wasmBytes) {
 				return { db: db, wasmBytes: wasmBytes, fromIndexedDB: false };
 			});
 		});
@@ -1167,9 +1167,9 @@ $(document).ready(function() {
 			});
 */
 // Instead as a fallback, download as ArrayBuffer. (TODO: Figure out the bugs with the above, and switch to using that one instead)
-			fetchOrDownloadAndStore(db, Module.locateFile('MyProject2.data'), 'arraybuffer').then(function(dataArrayBuffer) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://drive.google.com/uc?export=download&id=1K4CNWQO7Fb5kcjRkUsKMarUy8kqBB6M1'), 'arraybuffer').then(function(dataArrayBuffer) {
 				Module['preloadedPackages'] = {};
-				Module['preloadedPackages'][Module.locateFile('MyProject2.data')] = dataArrayBuffer;
+				Module['preloadedPackages'][Module.locateFile('https://drive.google.com/uc?export=download&id=1K4CNWQO7Fb5kcjRkUsKMarUy8kqBB6M1')] = dataArrayBuffer;
 				return dataJsDownload.then(addScriptToDom);
 			});
 
