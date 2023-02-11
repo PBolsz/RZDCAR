@@ -18,8 +18,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'T:/UE projects/MyProject2/Binaries/HTML5/MyProject2.data';
-    var REMOTE_PACKAGE_BASE = 'MyProject2.data';
+    var PACKAGE_NAME = 'https://drive.google.com/uc?export=download&id=1K4CNWQO7Fb5kcjRkUsKMarUy8kqBB6M1';
+    var REMOTE_PACKAGE_BASE = 'https://drive.google.com/uc?export=download&id=1K4CNWQO7Fb5kcjRkUsKMarUy8kqBB6M1';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
